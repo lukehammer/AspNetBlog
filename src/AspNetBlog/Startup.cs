@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
-using Microsoft.AspNet.Diagnostics;
 using Microsoft.Framework.ConfigurationModel;
+
 namespace AspNetBlog
 {
     public class Startup
@@ -14,7 +14,6 @@ namespace AspNetBlog
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-        
             services.AddMvc();
         }
 
@@ -22,17 +21,26 @@ namespace AspNetBlog
         {
             var config = new Configuration();
             config.AddEnvironmentVariables();
-            config.AddIniFile("config.ini");
+            config.AddJsonFile("config.json");
+            config.AddJsonFile("config.dev.json", true);
+            config.AddUserSecrets();
 
-            app.UseErrorHandler("/home/error");
+            var password = config.Get("password");
+
+            if (config.Get<bool>("debug"))
+            {
+                app.UseErrorPage();
+                app.UseRuntimeInfoPage();
+            }
+            else
+            {
+                app.UseErrorHandler("/home/error");
+            }
 
             app.UseMvc(routes => routes.MapRoute(
                 "Default", "{controller=Home}/{action=Index}/{id?}"));
 
             app.UseFileServer();
-
-                
-                
         }
     }
 }

@@ -35,5 +35,6 @@
     "wwwroot",
     "node_modules",
     "bower_components"
-  ]
+  ],
+  "userSecretsId": "aspnet5-AspNetBlog-20160120015408"
 }
