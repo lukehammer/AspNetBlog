@@ -1,12 +1,11 @@
-﻿@model AspNetBlog.Models.Post[]
+﻿
 @{
     Layout = "_Layout";
 }
 
-@foreach (var post in Model)
-{
-    @Html.Partial("_Post", post)
-}
+<h1>This is the Error Page</h1>
+
+
 
 <nav class="hide">
     <ul class="pager">
@@ -14,3 +13,4 @@
         <li><a href="#">Next</a></li>
     </ul>
 </nav>
+

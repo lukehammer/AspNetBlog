@@ -1,6 +1,5 @@
-﻿@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
-@model AspNetBlog.Models.Post
-@{
+﻿@model AspNetBlog.Models.Post
+@{ 
     Layout = "_Layout";
 }
 

@@ -42,6 +42,7 @@ namespace AspNetBlog.Controllers
         {
             return View();
         }
+
         public int Echo(int id)
         {
             return id;
@@ -49,7 +50,7 @@ namespace AspNetBlog.Controllers
 
         public IActionResult CauseAnError()
         {
-            throw new Exception("Error");
+            throw new Exception("Error!");
         }
     }
 }

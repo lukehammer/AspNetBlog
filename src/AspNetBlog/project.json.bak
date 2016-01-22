@@ -1,5 +1,4 @@
 ﻿{
-  "userSecretsId": "aspnet5-AspNetBlog-20150608025315",
   "webroot": "wwwroot",
   "version": "1.0.0-*",
 
@@ -17,7 +16,7 @@
   },
 
   "commands": {
-    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+      "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
   },
 
   "frameworks": {
@@ -36,5 +35,6 @@
     "wwwroot",
     "node_modules",
     "bower_components"
-  ]
+  ],
+  "userSecretsId": "aspnet5-AspNetBlog-20160120015408"
 }
