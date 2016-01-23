@@ -9,7 +9,7 @@ namespace AspNetBlog.Models
     public class BlogDataContext : DbContext
     {
 
-        
+       
         public DbSet<Post> Posts { get; set; }
 
         public BlogDataContext()
