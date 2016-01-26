@@ -17,7 +17,7 @@ namespace AspNetBlog.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var archivedPosts = _db.GetArchivedPost().ToArray();
+            var archivedPosts = _db.GetArchivedPosts().ToArray();
             return View(archivedPosts);
         }
 
