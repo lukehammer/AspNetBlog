@@ -43,7 +43,7 @@ namespace AspNetBlog.Controllers
 
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 return PartialView(posts);
-
+            
             return View(posts);
         }
 
