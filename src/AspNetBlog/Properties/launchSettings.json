@@ -12,6 +12,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
+        "Key": "Value",
+        "RecreateDatabase": "False",
         "Hosting:Environment": "Development"
       }
     },
